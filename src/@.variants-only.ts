@@ -1,7 +1,7 @@
 import { klass } from "@klass/core";
 import { cv } from "@intrnl/cv";
 import { classed } from "@tw-classed/core";
-import { cva } from "class-variance-authority";
+import { cva, defineConfig } from "cva";
 import { variants } from "classname-variants";
 import { tv } from "tailwind-variants";
 import { twMerge } from "tailwind-merge";
@@ -37,6 +37,8 @@ const create = <T extends (props: { color?: "red" | "green" | "blue"; size?: "md
     call(fn);
   });
 };
+
+const { cva: cvaTwMerge } = defineConfig({ hooks: { "cx:done": (className) => twMerge(className) } });
 
 create(
   "@klass/core",
@@ -127,8 +129,30 @@ create(
 );
 
 create(
-  "class-variance-authority",
-  cva("inline-flex items-center justify-center outline-none rounded-lg", {
+  "cva",
+  cva({
+    base: "inline-flex items-center justify-center outline-none rounded-lg",
+    variants: {
+      color: {
+        red: "bg-red-700 text-white",
+        green: "bg-green-700 text-white",
+        blue: "bg-blue-700 text-white",
+      },
+      size: {
+        md: "px-4 py-2 h-9 font-medium",
+      },
+    },
+    defaultVariants: {
+      color: "blue",
+      size: "md",
+    },
+  })
+);
+
+create(
+  "cva + tailwind-merge",
+  cvaTwMerge({
+    base: "inline-flex items-center justify-center outline-none rounded-lg",
     variants: {
       color: {
         red: "bg-red-700 text-white",

@@ -1,4 +1,5 @@
 import { cxs } from "@klass/core";
+import { cx } from "cva";
 import clsx from "clsx";
 import classnames from "classnames";
 
@@ -37,6 +38,8 @@ const create = <T extends O>(name: string, fn: T) => {
 };
 
 create("cxs (@klass/core)", cxs);
+
+create("cx (cva)", cx);
 
 create("clsx", clsx);
 

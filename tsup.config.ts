@@ -11,7 +11,7 @@ export default defineConfig({
     "@intrnl/cv",
     "@klass/core",
     "@tw-classed/core",
-    "class-variance-authority",
+    "cva",
     "classcat",
     "classname-variants",
     "classnames",
