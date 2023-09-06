@@ -1,6 +1,6 @@
 import { exec } from "node:child_process";
-import fs from "node:fs/promises";
-import path from "node:path";
+
+import { entries, dist } from "./utils";
 
 const exe = (cmd: string) =>
   new Promise((resolve, reject) => {
@@ -12,9 +12,10 @@ const exe = (cmd: string) =>
   });
 
 const start = async () => {
-  const files = (await fs.readdir(path.resolve(process.cwd(), "dist"))).filter((el) => el.startsWith("@."));
-  for await (const file of files) {
-    console.log(await exe(`node dist/${file}`));
+  for await (const [, value] of entries) {
+    for await (const element of value("js")) {
+      console.log(await exe(`node ${dist(element)}`));
+    }
   }
 };
 
