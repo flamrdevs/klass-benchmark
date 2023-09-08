@@ -1,13 +1,9 @@
-import run from "~/@";
+import run, { equal } from "~/@";
 
 type Fn = (props: Record<PropertyKey, any>) => string;
 
 const exe = <T extends Fn>(fn: T) => {
   return [fn({}), fn({ color: "red", size: "md", disabled: true }), fn({ color: "green", size: "lg", disabled: false })] as const;
-};
-
-const equal = (value: string, expect: string) => {
-  if (value !== expect) throw new Error("Not matches");
 };
 
 const test = <T extends Fn>(fn: T) => {

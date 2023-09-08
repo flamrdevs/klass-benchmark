@@ -43,5 +43,10 @@ const run = async (filename: string, key: string, callback: OPSCallback) => {
   console.log(`${filename} | ${key}`);
 };
 
+const equal = (value: string, expect: string) => {
+  if (true && value !== expect) throw new Error([`Not matches.`, ` expect : ${expect}`, ` received : ${value}`].join("\n"));
+};
+
 export type { JSONResult, OPSCallback };
+export { equal };
 export default run;

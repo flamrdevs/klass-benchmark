@@ -1,19 +1,15 @@
-import run from "~/@";
+import run, { equal } from "~/@";
 
 type Fn = (...args: any[]) => string;
 
 const exe = <T extends Fn>(fn: T) => {
-  return [fn("block", ["mx-3 my-3", { [fn("px-3", "py-3")]: true }])] as const;
-};
-
-const equal = (value: string, expect: string) => {
-  if (value !== expect) throw new Error("Not matches");
+  return fn("block", ["mx-3 my-3", { [fn("px-3", "py-3")]: true }]);
 };
 
 const test = <T extends Fn>(fn: T) => {
-  const [r1] = exe(fn);
+  const result = exe(fn);
 
-  equal(r1, "block mx-3 my-3 px-3 py-3");
+  equal(result, "block mx-3 my-3 px-3 py-3");
 };
 
 export const start = <T extends Fn>(key: string, fn: T) => {

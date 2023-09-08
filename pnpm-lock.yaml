@@ -5,8 +5,8 @@ dependencies:
     specifier: ^0.1.3
     version: 0.1.3
   '@klass/core':
-    specifier: ^2.0.5
-    version: 2.0.5
+    specifier: ^2.0.6
+    version: 2.0.6
   '@tw-classed/core':
     specifier: ^1.5.1
     version: 1.5.1
@@ -16,6 +16,12 @@ dependencies:
   '@vanilla-extract/recipes':
     specifier: ^0.5.0
     version: 0.5.0(@vanilla-extract/css@1.13.0)
+  '@vanilla-extract/sprinkles':
+    specifier: ^1.6.1
+    version: 1.6.1(@vanilla-extract/css@1.13.0)
+  classname-manager:
+    specifier: ^1.1.0
+    version: 1.1.0
   classname-variants:
     specifier: ^1.3.2
     version: 1.3.2
@@ -28,6 +34,9 @@ dependencies:
   cva:
     specifier: 1.0.0-beta.0
     version: 1.0.0-beta.0(typescript@5.2.2)
+  cvu:
+    specifier: ^0.2.0
+    version: 0.2.0
   tailwind-merge:
     specifier: ^1.14.0
     version: 1.14.0
@@ -42,9 +51,6 @@ devDependencies:
   '@types/node':
     specifier: ^20.5.9
     version: 20.5.9
-  '@types/prettier':
-    specifier: ^3.0.0
-    version: 3.0.0
   '@vanilla-extract/esbuild-plugin':
     specifier: ^2.3.0
     version: 2.3.0(@types/node@20.5.9)
@@ -1161,8 +1167,8 @@ packages:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  /@klass/core@2.0.5:
-    resolution: {integrity: sha512-zz9IdSE21w2WurWBFN9K7ButFIz1ne85lPvCvjctY7+pZNJwe2XywLB2Cgf+hEIdXfhr96I9NkL3g1tDuzSb2w==}
+  /@klass/core@2.0.6:
+    resolution: {integrity: sha512-0qOILeb7F8aHVmDEu5BFDqbH3tci9rqRQI6dg4J47Bk+Jcvvb41i0jrYaGBUkbUkGGfZtcjd/3bk0csB1lF4/g==}
     dev: false
 
   /@nodelib/fs.scandir@2.1.5:
@@ -1536,13 +1542,6 @@ packages:
     resolution: {integrity: sha512-SuT16Q1K51EAVPz1K29DJ/sXjhSQ0zjvsypYJ6tlwVsRV9jwW5Adq2ch8Dq8kDBCkYnELS7N7VNCSB5nC56t/g==}
     dev: true
 
-  /@types/prettier@3.0.0:
-    resolution: {integrity: sha512-mFMBfMOz8QxhYVbuINtswBp9VL2b4Y0QqYHwqLz3YbgtfAcat2Dl6Y1o4e22S/OVE6Ebl9m7wWiMT2lSbAs1wA==}
-    deprecated: This is a stub types definition. prettier provides its own type definitions, so you do not need this installed.
-    dependencies:
-      prettier: 3.0.3
-    dev: true
-
   /@types/prop-types@15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
     dev: true
@@ -1647,6 +1646,14 @@ packages:
 
   /@vanilla-extract/recipes@0.5.0(@vanilla-extract/css@1.13.0):
     resolution: {integrity: sha512-NfdZ8XyqCDG2RsO3FmYPALDMKg5045dRD97NbBb0Fog3LMDVXZxYgDOct5FAWob8U6W4GbhVpRZt1X9hNnH6fA==}
+    peerDependencies:
+      '@vanilla-extract/css': ^1.0.0
+    dependencies:
+      '@vanilla-extract/css': 1.13.0
+    dev: false
+
+  /@vanilla-extract/sprinkles@1.6.1(@vanilla-extract/css@1.13.0):
+    resolution: {integrity: sha512-N/RGKwGAAidBupZ436RpuweRQHEFGU+mvAqBo8PRMAjJEmHoPDttV8RObaMLrJHWLqvX+XUMinHUnD0hFRQISw==}
     peerDependencies:
       '@vanilla-extract/css': ^1.0.0
     dependencies:
@@ -2627,6 +2634,10 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /classname-manager@1.1.0:
+    resolution: {integrity: sha512-a8FyBcrjZ3M0IDo1CSo/NurSGEAJViCZJ58vU/nhIlZ739G6cbNZ74xv+sjoPH1ikayYNgv8bk8JeYNUFCJXYw==}
+    dev: false
+
   /classname-variants@1.3.2:
     resolution: {integrity: sha512-1KunzRErM/xTmlNenjiqxjA4iJuTYG6dzomAzl3g6z1Hfs8S4zeLFUGu+rXp4JExQni8nqJ/yYA6QqLGACefFg==}
     dev: false
@@ -2656,6 +2667,11 @@ packages:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}
     engines: {node: '>=0.8'}
     dev: true
+
+  /clsx@1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
+    dev: false
 
   /clsx@2.0.0:
     resolution: {integrity: sha512-rQ1+kcj+ttHG0MKVGBUXwayCCF1oh39BF5COIpRzuCEv8Mwjv0XucrI2ExNTOn9IlLifGClWQcU9BrZORvtw6Q==}
@@ -2756,6 +2772,12 @@ packages:
     dependencies:
       clsx: 2.0.0
       typescript: 5.2.2
+    dev: false
+
+  /cvu@0.2.0:
+    resolution: {integrity: sha512-rG/nxH5kVqnJPC+NvvynVKGXqo4WYCR+ohEEunOqU93H+IDjUEcae1uyNzBkYfuBjqS0miJvqgejpxZK94mhHg==}
+    dependencies:
+      clsx: 1.2.1
     dev: false
 
   /debug@4.3.4:
@@ -3474,6 +3496,12 @@ packages:
   /jiti@1.19.3:
     resolution: {integrity: sha512-5eEbBDQT/jF1xg6l36P+mWGGoH9Spuy0PCdSr2dtWRDGC6ph/w9ZCL4lmESW8f8F7MwT3XKescfP0wnZWAKL9w==}
     hasBin: true
+    dev: true
+
+  /jiti@1.20.0:
+    resolution: {integrity: sha512-3TV69ZbrvV6U5DfQimop50jE9Dl6J8O1ja1dvBbMba/sZ3YBEQqJ2VZRoQPVnhlzjNtU1vaXRZVrVjU4qtm8yA==}
+    hasBin: true
+    dev: false
 
   /joycon@3.1.1:
     resolution: {integrity: sha512-34wB/Y7MW7bzjKRjUKTa46I2Z7eV62Rkhva+KkopW7Qvv/OSWBqvkSY7vusOPrNuZcUG3tApvdVgNB8POj3SPw==}
@@ -5048,7 +5076,7 @@ packages:
       fast-glob: 3.3.1
       glob-parent: 6.0.2
       is-glob: 4.0.3
-      jiti: 1.19.3
+      jiti: 1.20.0
       lilconfig: 2.1.0
       micromatch: 4.0.5
       normalize-path: 3.0.0
