@@ -41,6 +41,21 @@ start(
         disabled: true,
         class: "disabled-blue",
       },
+      {
+        size: "sm",
+        disabled: true,
+        class: "disabled-sm",
+      },
+      {
+        size: "md",
+        disabled: true,
+        class: "disabled-md",
+      },
+      {
+        size: "lg",
+        disabled: true,
+        class: "disabled-lg",
+      },
     ],
   })
 );

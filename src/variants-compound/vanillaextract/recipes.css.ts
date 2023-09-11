@@ -43,5 +43,26 @@ export default recipe({
       },
       style: { color: "blue" },
     },
+    {
+      variants: {
+        size: "sm",
+        disabled: true,
+      },
+      style: { padding: "1.5px 3px", height: "2rem" },
+    },
+    {
+      variants: {
+        size: "md",
+        disabled: true,
+      },
+      style: { padding: "2px 4px", height: "2.25rem" },
+    },
+    {
+      variants: {
+        size: "lg",
+        disabled: true,
+      },
+      style: { padding: "2.5px 5px", height: "2.5rem" },
+    },
   ],
 });

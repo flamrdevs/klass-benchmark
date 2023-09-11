@@ -45,6 +45,21 @@ start(
         disabled: true,
         className: "disabled-blue",
       },
+      {
+        size: "sm",
+        disabled: true,
+        className: "disabled-sm",
+      },
+      {
+        size: "md",
+        disabled: true,
+        className: "disabled-md",
+      },
+      {
+        size: "lg",
+        disabled: true,
+        className: "disabled-lg",
+      },
     ],
   })
 );

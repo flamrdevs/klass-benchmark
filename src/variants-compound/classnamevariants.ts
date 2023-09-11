@@ -47,6 +47,27 @@ start(
         },
         className: "disabled-blue",
       },
+      {
+        variants: {
+          size: "sm",
+          disabled: true,
+        },
+        className: "disabled-sm",
+      },
+      {
+        variants: {
+          size: "md",
+          disabled: true,
+        },
+        className: "disabled-md",
+      },
+      {
+        variants: {
+          size: "lg",
+          disabled: true,
+        },
+        className: "disabled-lg",
+      },
     ],
   })
 );

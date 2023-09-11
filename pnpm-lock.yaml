@@ -5,8 +5,8 @@ dependencies:
     specifier: ^0.1.3
     version: 0.1.3
   '@klass/core':
-    specifier: ^2.0.6
-    version: 2.0.6
+    specifier: ^3.3.3
+    version: 3.3.3
   '@tw-classed/core':
     specifier: ^1.5.1
     version: 1.5.1
@@ -25,9 +25,6 @@ dependencies:
   classname-variants:
     specifier: ^1.3.2
     version: 1.3.2
-  classnames:
-    specifier: ^2.3.2
-    version: 2.3.2
   clsx:
     specifier: ^2.0.0
     version: 2.0.0
@@ -47,13 +44,13 @@ dependencies:
 devDependencies:
   '@pandacss/dev':
     specifier: ^0.14.0
-    version: 0.14.0(@internationalized/date@3.4.0)(@types/node@20.5.9)(@types/react-dom@18.2.7)(@types/react@18.2.21)(typescript@5.2.2)
+    version: 0.14.0(@internationalized/date@3.5.0)(@types/node@20.6.0)(@types/react-dom@18.2.7)(@types/react@18.2.21)(typescript@5.2.2)
   '@types/node':
-    specifier: ^20.5.9
-    version: 20.5.9
+    specifier: ^20.6.0
+    version: 20.6.0
   '@vanilla-extract/esbuild-plugin':
     specifier: ^2.3.0
-    version: 2.3.0(@types/node@20.5.9)
+    version: 2.3.0(@types/node@20.6.0)
   prettier:
     specifier: ^3.0.3
     version: 3.0.3
@@ -79,7 +76,7 @@ packages:
       '@jridgewell/trace-mapping': 0.3.19
     dev: true
 
-  /@ark-ui/react@0.9.0(@internationalized/date@3.4.0)(react-dom@18.2.0)(react@18.2.0):
+  /@ark-ui/react@0.9.0(@internationalized/date@3.5.0)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-lg9Sl9/SfVG9pqyCwjSFldNFGKMrs6aoFG7J83fk2ha8XKcpFIMNZwn9Hc3qkzeKLIYGhtED8vYG8UeNTT5psw==}
     peerDependencies:
       react: '>=18.0.0'
@@ -94,7 +91,7 @@ packages:
       '@zag-js/color-utils': 0.12.0
       '@zag-js/combobox': 0.12.0
       '@zag-js/date-picker': 0.12.0
-      '@zag-js/date-utils': 0.12.0(@internationalized/date@3.4.0)
+      '@zag-js/date-utils': 0.12.0(@internationalized/date@3.5.0)
       '@zag-js/dialog': 0.12.0
       '@zag-js/editable': 0.12.0
       '@zag-js/hover-card': 0.12.0
@@ -157,7 +154,7 @@ packages:
       astro: ^2.5.0
     dependencies:
       '@astrojs/prism': 2.1.2
-      astro: 2.9.6(@types/node@20.5.9)
+      astro: 2.9.6(@types/node@20.6.0)
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.2
       rehype-raw: 6.1.1
@@ -1138,6 +1135,12 @@ packages:
       '@swc/helpers': 0.5.1
     dev: true
 
+  /@internationalized/date@3.5.0:
+    resolution: {integrity: sha512-nw0Q+oRkizBWMioseI8+2TeUPEyopJVz5YxoYVzR0W1v+2YytiYah7s/ot35F149q/xAg4F1gT/6eTd+tsUpFQ==}
+    dependencies:
+      '@swc/helpers': 0.5.2
+    dev: true
+
   /@intrnl/cv@0.1.3:
     resolution: {integrity: sha512-9D8d24sqFSL3faKJB9oSlvKjthb0Js20nI30ICN1V29CygeXc7sUTSjgFoXgH+kuGAhdxaL8RRRusJamP5r4Jw==}
     dev: false
@@ -1167,8 +1170,10 @@ packages:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  /@klass/core@2.0.6:
-    resolution: {integrity: sha512-0qOILeb7F8aHVmDEu5BFDqbH3tci9rqRQI6dg4J47Bk+Jcvvb41i0jrYaGBUkbUkGGfZtcjd/3bk0csB1lF4/g==}
+  /@klass/core@3.3.3:
+    resolution: {integrity: sha512-H9xsVSSWMAdxxwjVTxQVLoSCoS+zbJDbjPMsLB+n1nRliHiljC9DHqdw1iHLIB7Kf9MuWkxtxIRliaP1UFbiCQ==}
+    dependencies:
+      clsx: 2.0.0
     dev: false
 
   /@nodelib/fs.scandir@2.1.5:
@@ -1226,7 +1231,7 @@ packages:
       ts-pattern: 5.0.4
     dev: true
 
-  /@pandacss/dev@0.14.0(@internationalized/date@3.4.0)(@types/node@20.5.9)(@types/react-dom@18.2.7)(@types/react@18.2.21)(typescript@5.2.2):
+  /@pandacss/dev@0.14.0(@internationalized/date@3.5.0)(@types/node@20.6.0)(@types/react-dom@18.2.7)(@types/react@18.2.21)(typescript@5.2.2):
     resolution: {integrity: sha512-WMgZfoqJfMaK+JqCfH4d82sOqxdWDJdMWjpKuGfLcFJlE2vURINpNsasV1zFA9X6H+e35Tu099IW055ftxD8aA==}
     hasBin: true
     dependencies:
@@ -1238,7 +1243,7 @@ packages:
       '@pandacss/postcss': 0.14.0(typescript@5.2.2)
       '@pandacss/preset-panda': 0.14.0
       '@pandacss/shared': 0.14.0
-      '@pandacss/studio': 0.14.0(@internationalized/date@3.4.0)(@types/node@20.5.9)(@types/react-dom@18.2.7)(@types/react@18.2.21)(typescript@5.2.2)
+      '@pandacss/studio': 0.14.0(@internationalized/date@3.5.0)(@types/node@20.6.0)(@types/react-dom@18.2.7)(@types/react@18.2.21)(typescript@5.2.2)
       '@pandacss/token-dictionary': 0.14.0
       '@pandacss/types': 0.14.0
       cac: 6.7.14
@@ -1389,10 +1394,10 @@ packages:
     resolution: {integrity: sha512-x9vrqC1DzuT3BBC9xvovzmPNhZJyMFvt9s0G2a/tKk12n85TmO+CCgEAk22nz47y2vB98B3AD01yAXazb7jy1g==}
     dev: true
 
-  /@pandacss/studio@0.14.0(@internationalized/date@3.4.0)(@types/node@20.5.9)(@types/react-dom@18.2.7)(@types/react@18.2.21)(typescript@5.2.2):
+  /@pandacss/studio@0.14.0(@internationalized/date@3.5.0)(@types/node@20.6.0)(@types/react-dom@18.2.7)(@types/react@18.2.21)(typescript@5.2.2):
     resolution: {integrity: sha512-TOMm6yQjwsod8HjnNkdCvXsslJ7Z5de88qNOoY+g7rX6KM++8Xx29BarKzK0n5Yl2yS5U0etFbvT+8oCOY4Zyw==}
     dependencies:
-      '@ark-ui/react': 0.9.0(@internationalized/date@3.4.0)(react-dom@18.2.0)(react@18.2.0)
+      '@ark-ui/react': 0.9.0(@internationalized/date@3.5.0)(react-dom@18.2.0)(react@18.2.0)
       '@astrojs/react': 2.2.1(@types/react-dom@18.2.7)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)
       '@pandacss/config': 0.14.0
       '@pandacss/logger': 0.14.0
@@ -1400,11 +1405,11 @@ packages:
       '@pandacss/shared': 0.14.0
       '@pandacss/token-dictionary': 0.14.0
       '@pandacss/types': 0.14.0
-      astro: 2.9.6(@types/node@20.5.9)
+      astro: 2.9.6(@types/node@20.6.0)
       javascript-stringify: 2.1.0
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      vite: 4.4.9(@types/node@20.5.9)
+      vite: 4.4.9(@types/node@20.6.0)
     transitivePeerDependencies:
       - '@internationalized/date'
       - '@types/node'
@@ -1448,6 +1453,12 @@ packages:
 
   /@swc/helpers@0.5.1:
     resolution: {integrity: sha512-sJ902EfIzn1Fa+qYmjdQqh8tPsoxyBz+8yBKC2HKUxyezKJFwPGOn7pv4WY6QuQW//ySQi5lJjA/ZT9sNWWNTg==}
+    dependencies:
+      tslib: 2.6.2
+    dev: true
+
+  /@swc/helpers@0.5.2:
+    resolution: {integrity: sha512-E4KcWTpoLHqwPHLxidpOqQbcrZVgi0rsmmZXUle1jXmJfuIf/UWpczUJ7MZZ5tlxytgJXyp0w4PGkkeLiuIdZw==}
     dependencies:
       tslib: 2.6.2
     dev: true
@@ -1534,8 +1545,8 @@ packages:
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
     dev: true
 
-  /@types/node@20.5.9:
-    resolution: {integrity: sha512-PcGNd//40kHAS3sTlzKB9C9XL4K0sTup8nbG5lC14kzEteTNuAFh9u5nA0o5TWnSG2r/JNPRXFVcHJIIeRlmqQ==}
+  /@types/node@20.6.0:
+    resolution: {integrity: sha512-najjVq5KN2vsH2U/xyh2opaSEz6cZMR2SetLIlxlj08nOcmPOemJmUK2o4kUzfLqfrWE0PIrNeE16XhYDd3nqg==}
     dev: true
 
   /@types/parse5@6.0.3:
@@ -1599,10 +1610,10 @@ packages:
       media-query-parser: 2.0.2
       outdent: 0.8.0
 
-  /@vanilla-extract/esbuild-plugin@2.3.0(@types/node@20.5.9):
+  /@vanilla-extract/esbuild-plugin@2.3.0(@types/node@20.6.0):
     resolution: {integrity: sha512-YsBLRDWvbqj/Zep0UdbgI1FfHfXJhf4tHYbVr5oPbVIf53p736hx+V3Wggo9ScK8Eu0aWVavxg6OvPOUITxdqg==}
     dependencies:
-      '@vanilla-extract/integration': 6.2.2(@types/node@20.5.9)
+      '@vanilla-extract/integration': 6.2.2(@types/node@20.6.0)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -1614,7 +1625,7 @@ packages:
       - terser
     dev: true
 
-  /@vanilla-extract/integration@6.2.2(@types/node@20.5.9):
+  /@vanilla-extract/integration@6.2.2(@types/node@20.6.0):
     resolution: {integrity: sha512-gV3qPFjFap1+IrPeuFy+tEZOq7l7ifJf1ik/kluDWhPr1ffsFG9puq1/jjJ4rod1BIC79Q5ZWPNvBInHyxfCew==}
     dependencies:
       '@babel/core': 7.22.15
@@ -1628,8 +1639,8 @@ packages:
       lodash: 4.17.21
       mlly: 1.4.2
       outdent: 0.8.0
-      vite: 4.4.9(@types/node@20.5.9)
-      vite-node: 0.28.5(@types/node@20.5.9)
+      vite: 4.4.9(@types/node@20.6.0)
+      vite-node: 0.28.5(@types/node@20.6.0)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -1850,6 +1861,14 @@ packages:
       '@internationalized/date': '>=3.0.0'
     dependencies:
       '@internationalized/date': 3.4.0
+    dev: true
+
+  /@zag-js/date-utils@0.12.0(@internationalized/date@3.5.0):
+    resolution: {integrity: sha512-BYhhw3xFTIR9lUymLiBCkELZwd8VI8JeK16SmhFRAMAWG5ymrKKMz22PeaM4VX92/fzsMSNFQU1FK2kaEHsurA==}
+    peerDependencies:
+      '@internationalized/date': '>=3.0.0'
+    dependencies:
+      '@internationalized/date': 3.5.0
     dev: true
 
   /@zag-js/dialog@0.12.0:
@@ -2335,7 +2354,7 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /astro@2.9.6(@types/node@20.5.9):
+  /astro@2.9.6(@types/node@20.6.0):
     resolution: {integrity: sha512-yvbZQ6YOWYLejyQ4nAcgZLDYQ34enQJ5/LWlXKtUzXzpsUHB75vJMj+XmEq5Q2eVlZOlQrp0lU+nhSRGaOsOUQ==}
     engines: {node: '>=16.12.0', npm: '>=6.14.0'}
     hasBin: true
@@ -2398,7 +2417,7 @@ packages:
       typescript: 5.2.2
       unist-util-visit: 4.1.2
       vfile: 5.3.7
-      vite: 4.4.9(@types/node@20.5.9)
+      vite: 4.4.9(@types/node@20.6.0)
       vitefu: 0.2.4(vite@4.4.9)
       which-pm: 2.1.1
       yargs-parser: 21.1.1
@@ -2640,10 +2659,6 @@ packages:
 
   /classname-variants@1.3.2:
     resolution: {integrity: sha512-1KunzRErM/xTmlNenjiqxjA4iJuTYG6dzomAzl3g6z1Hfs8S4zeLFUGu+rXp4JExQni8nqJ/yYA6QqLGACefFg==}
-    dev: false
-
-  /classnames@2.3.2:
-    resolution: {integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==}
     dev: false
 
   /cli-boxes@3.0.0:
@@ -3022,7 +3037,7 @@ packages:
     resolution: {integrity: sha512-EzV94NYKoO09GLXGjXj9JIlXijVck4ONSr5wiCWDvhsvj5jxSrzTmRU/9C1DyB6uToszLs8aifA6NQ7lEQdvFw==}
     engines: {node: '>= 0.8'}
     dependencies:
-      '@types/node': 20.5.9
+      '@types/node': 20.6.0
       require-like: 0.1.2
     dev: true
 
@@ -5396,7 +5411,7 @@ packages:
       vfile-message: 3.1.4
     dev: true
 
-  /vite-node@0.28.5(@types/node@20.5.9):
+  /vite-node@0.28.5(@types/node@20.6.0):
     resolution: {integrity: sha512-LmXb9saMGlrMZbXTvOveJKwMTBTNUH66c8rJnQ0ZPNX+myPEol64+szRzXtV5ORb0Hb/91yq+/D3oERoyAt6LA==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
@@ -5408,7 +5423,7 @@ packages:
       picocolors: 1.0.0
       source-map: 0.6.1
       source-map-support: 0.5.21
-      vite: 4.4.9(@types/node@20.5.9)
+      vite: 4.4.9(@types/node@20.6.0)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -5420,7 +5435,7 @@ packages:
       - terser
     dev: true
 
-  /vite@4.4.9(@types/node@20.5.9):
+  /vite@4.4.9(@types/node@20.6.0):
     resolution: {integrity: sha512-2mbUn2LlUmNASWwSCNSJ/EG2HuSRTnVNaydp6vMCm5VIqJsjMfbIWtbH2kDuwUVW5mMUKKZvGPX/rqeqVvv1XA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -5448,7 +5463,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.5.9
+      '@types/node': 20.6.0
       esbuild: 0.18.20
       postcss: 8.4.29
       rollup: 3.28.1
@@ -5464,7 +5479,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.4.9(@types/node@20.5.9)
+      vite: 4.4.9(@types/node@20.6.0)
     dev: true
 
   /vscode-css-languageservice@6.2.7:

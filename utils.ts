@@ -4,7 +4,6 @@ const createEntry = (folder: string, extension: Extension, filenames: string[]) 
   filenames.map((filename) => `${folder}/${filename}.${extension}`);
 
 export const entries = Object.entries({
-  "class-concatenation": (extension: Extension) => createEntry("class-concatenation", extension, ["classnames", "clsx", "cx", "cxs"]),
   variants: (extension: Extension) =>
     createEntry("variants", extension, [
       "classnamemanager",

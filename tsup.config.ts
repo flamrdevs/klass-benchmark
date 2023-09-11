@@ -9,9 +9,10 @@ const config = (entry: Options["entry"], outDir: Options["outDir"]): Options => 
   return {
     entry,
     outDir,
-    format: ["cjs"],
+    format: ["esm"],
     target: "node20",
     minify: true,
+    splitting: false,
     noExternal: [
       "@intrnl/cv",
       "@klass/core",

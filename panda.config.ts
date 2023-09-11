@@ -70,6 +70,21 @@ export default defineConfig({
               disabled: true,
               css: { color: "blue" },
             },
+            {
+              size: "sm",
+              disabled: true,
+              css: { padding: "1.5px 3px", height: "2rem" },
+            },
+            {
+              size: "md",
+              disabled: true,
+              css: { padding: "2px 4px", height: "2.25rem" },
+            },
+            {
+              size: "lg",
+              disabled: true,
+              css: { padding: "2.5px 5px", height: "2.5rem" },
+            },
           ],
         }),
         responsiveVariants: defineRecipe({
