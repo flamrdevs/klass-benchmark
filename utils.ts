@@ -50,7 +50,8 @@ export const entries = Object.entries({
       "tailwindvariants",
       "vanillaextract",
     ]),
-  slots: (extension: Extension) => createEntry("slots", extension, ["klass", "pandacss", "tailwindvariants"]),
+  slots: (extension: Extension) =>
+    createEntry("slots", extension, ["klass-merge", "klass", "pandacss", "tailwindvariants-merge", "tailwindvariants"]),
 } satisfies Record<string, (extension: Extension) => string[]>).filter(() => true);
 
 export const src = (path: string) => `./src/${path}`;

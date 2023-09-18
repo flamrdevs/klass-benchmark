@@ -96,8 +96,8 @@ const fn = tv(
     ],
   },
   {
-    twMerge: false,
+    twMerge: true,
   }
 );
 
-start("tailwind-variants(-tailwind-merge)", fn);
+start("tailwind-variants(+tailwind-merge)", fn);

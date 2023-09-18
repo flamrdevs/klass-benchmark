@@ -1,10 +1,11 @@
-import { tv } from "tailwind-variants";
+import slots from "@klass/core/slots";
+import { twMerge } from "tailwind-merge";
 
 import { start } from "./@";
 
-const fn = tv(
+const fn = slots(
   {
-    slots: {
+    base: {
       root: "root",
       header: "header",
       body: "body",
@@ -95,9 +96,7 @@ const fn = tv(
       },
     ],
   },
-  {
-    twMerge: false,
-  }
+  { it: twMerge }
 );
 
-start("tailwind-variants(-tailwind-merge)", fn);
+start("@klass/core/slots + tailwind-merge", fn);
