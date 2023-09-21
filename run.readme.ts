@@ -46,9 +46,12 @@ const start = async () => {
         (os.totalmem() / 1024 / 1024 / 1024).toFixed(2) + "GB"
       }\``,
       `Node.js \`${process.version}\``,
-      `Testing on \`${new Intl.DateTimeFormat("en-GB", { dateStyle: "full", timeZone: "Australia/Sydney" }).format(new Date())}\`.`,
+      `Testing on \`${new Intl.DateTimeFormat("en-US", { dateStyle: "full", timeZone: "Asia/Jakarta" }).format(new Date())}\``,
     ].join("\n\n");
   });
+
+  const sortFn = <T extends [string, number]>(a: T, b: T) => (a[1] < b[1] ? 1 : a[1] > b[1] ? -1 : 0);
+  const mapFn = <T extends [string, number]>([key, value]: T, index: number) => [index + 1, key, value].map(String);
 
   for await (const [key] of entries) {
     const target = dist(`${key}.json`);
@@ -56,14 +59,7 @@ const start = async () => {
 
     const record = JSON.parse(await fs.readFile(target, "utf8")) as JSONResult;
 
-    await replace(key, () => {
-      return table(
-        ["No", "Libs", "Ops/Sec"],
-        [...Object.entries(record).sort((a, b) => (a[1] < b[1] ? 1 : a[1] > b[1] ? -1 : 0))].map(([key, value], index) =>
-          [index + 1, key, value].map(String)
-        )
-      );
-    });
+    await replace(key, () => table(["No", "Libs", "Ops/Sec"], [...Object.entries(record).sort(sortFn)].map(mapFn)));
   }
 
   console.log("Ok");
