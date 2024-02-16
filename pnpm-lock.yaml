@@ -12,11 +12,11 @@ devDependencies:
     specifier: ^20.11.17
     version: 20.11.17
   clsx:
-    specifier: 2.1.0
-    version: 2.1.0
+    specifier: 2.0.0
+    version: 2.0.0
   cva:
     specifier: 1.0.0-beta.1
-    version: 1.0.0-beta.1
+    version: 1.0.0-beta.1(typescript@5.3.3)
   prettier:
     specifier: ^3.2.5
     version: 3.2.5
@@ -31,10 +31,16 @@ devDependencies:
     version: 5.27.0
   tsup:
     specifier: ^8.0.2
-    version: 8.0.2(postcss@8.4.35)
+    version: 8.0.2(postcss@8.4.35)(typescript@5.3.3)
   tsx:
     specifier: ^4.7.1
     version: 4.7.1
+  typescript:
+    specifier: ^5.3.3
+    version: 5.3.3
+  valibot:
+    specifier: ^0.28.1
+    version: 0.28.1
 
 packages:
 
@@ -309,7 +315,7 @@ packages:
   /@klass/core@4.0.0-next.9:
     resolution: {integrity: sha512-Y8I4SAFE+9Gd1XsmLGvpe+F9LR2oLYQ6p0H5/uFf2Z6Z/LjkSqk2UBxiRcCd2DkJrrN8Vob+6H2Zl9c2Tz7PKA==}
     dependencies:
-      clsx: 2.1.0
+      clsx: 2.0.0
     dev: true
 
   /@nodelib/fs.scandir@2.1.5:
@@ -569,11 +575,6 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /clsx@2.1.0:
-    resolution: {integrity: sha512-m3iNNWpd9rl3jvvcBnu70ylMdrXt8Vlq4HYadnU5fwcOtvkSQWPmj7amUcDT2qYI7risszBjI5AUIUox9D16pg==}
-    engines: {node: '>=6'}
-    dev: true
-
   /color-convert@2.0.1:
     resolution: {integrity: sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==}
     engines: {node: '>=7.0.0'}
@@ -609,7 +610,7 @@ packages:
     hasBin: true
     dev: true
 
-  /cva@1.0.0-beta.1:
+  /cva@1.0.0-beta.1(typescript@5.3.3):
     resolution: {integrity: sha512-gznFqTgERU9q4wg7jfgqtt34+RUt9S5t0xDAAEuDwQEAXEgjdDkKXpLLNjwSxsB4Ln/sqWJEH7yhE8Ny0mxd0w==}
     peerDependencies:
       typescript: '>= 4.5.5 < 6'
@@ -618,6 +619,7 @@ packages:
         optional: true
     dependencies:
       clsx: 2.0.0
+      typescript: 5.3.3
     dev: true
 
   /debug@4.3.4:
@@ -1381,7 +1383,7 @@ packages:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
     dev: true
 
-  /tsup@8.0.2(postcss@8.4.35):
+  /tsup@8.0.2(postcss@8.4.35)(typescript@5.3.3):
     resolution: {integrity: sha512-NY8xtQXdH7hDUAZwcQdY/Vzlw9johQsaqf7iwZ6g1DOUlFYQ5/AtVAjTvihhEyeRlGo4dLRVHtrRaL35M1daqQ==}
     engines: {node: '>=18'}
     hasBin: true
@@ -1415,6 +1417,7 @@ packages:
       source-map: 0.8.0-beta.0
       sucrase: 3.35.0
       tree-kill: 1.2.2
+      typescript: 5.3.3
     transitivePeerDependencies:
       - supports-color
       - ts-node
@@ -1431,12 +1434,22 @@ packages:
       fsevents: 2.3.3
     dev: true
 
+  /typescript@5.3.3:
+    resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+    dev: true
+
   /undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
     dev: true
 
   /util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
+    dev: true
+
+  /valibot@0.28.1:
+    resolution: {integrity: sha512-zQnjwNJuXk6362Leu0+4eFa/SMwRom3/hEvH6s1EGf3oXIPbo2WFKDra9ymnbVh3clLRvd8hw4sKF5ruI2Lyvw==}
     dev: true
 
   /webidl-conversions@4.0.2:
