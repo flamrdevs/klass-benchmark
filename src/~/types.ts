@@ -1,6 +1,7 @@
 export type Config = {
   name: string;
-  merge: boolean;
+  merge?: boolean;
+  relevant?: boolean;
 };
 
-export type Fn = (props?: Record<any, any>) => string;
+export type Fn<P = Record<any, any>> = (props: P) => string;

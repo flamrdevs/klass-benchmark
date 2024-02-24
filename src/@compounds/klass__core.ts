@@ -51,7 +51,6 @@ const fn = klass({
 run(
   {
     name: "@klass/core",
-    merge: false,
   },
   fn
 );

@@ -45,7 +45,6 @@ const fn = cva({
 run(
   {
     name: "cva",
-    merge: false,
   },
   fn
 );

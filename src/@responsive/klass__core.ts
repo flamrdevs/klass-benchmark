@@ -35,7 +35,6 @@ const fn = reklass({
 run(
   {
     name: "@klass/core",
-    merge: false,
   },
   fn
 );

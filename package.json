@@ -2,6 +2,7 @@
   "name": "klass-benchmark",
   "type": "module",
   "scripts": {
+    "prepare": "panda codegen",
     "build": "tsup",
     "bench": "tsx run/bench.ts",
     "readme": "tsx run/readme.ts",
@@ -9,16 +10,22 @@
   },
   "devDependencies": {
     "@klass/core": "4.0.0-next.9",
-    "@types/node": "^20.11.17",
-    "clsx": "2.0.0",
+    "@pandacss/dev": "^0.32.1",
+    "@stitches/core": "^1.2.8",
+    "@types/node": "^20.11.20",
+    "@vanilla-extract/css": "^1.14.1",
+    "@vanilla-extract/esbuild-plugin": "^2.3.5",
+    "@vanilla-extract/recipes": "^0.5.1",
+    "@vanilla-extract/sprinkles": "^1.6.1",
+    "clsx": "2.1.0",
     "cva": "1.0.0-beta.1",
     "prettier": "^3.2.5",
     "tailwind-merge": "^2.2.1",
     "tailwind-variants": "^0.2.0",
-    "terser": "^5.27.0",
+    "terser": "^5.28.1",
     "tsup": "^8.0.2",
     "tsx": "^4.7.1",
     "typescript": "^5.3.3",
-    "valibot": "^0.28.1"
+    "valibot": "^0.29.0"
   }
 }

@@ -29,7 +29,6 @@ const fn = tv(
 run(
   {
     name: "tailwind-variants",
-    merge: false,
   },
   fn
 );

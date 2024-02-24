@@ -1,6 +1,6 @@
 import { format } from "prettier";
 
-import { rds, rfs, ws } from "./../node";
+import { rds, rfs, ws, isFolder, isFile } from "./../utils";
 
 import { parse } from "./core";
 
@@ -34,14 +34,14 @@ const write = async (folder: string, items: Item[]) => {
 
 const folders = (() => {
   const result: string[] = [];
-  for (const dirent of rds("dist")) if (dirent.isDirectory() && dirent.name.startsWith("@")) result.push(dirent.name);
+  for (const dirent of rds("dist")) if (isFolder(dirent)) result.push(dirent.name);
   return result;
 })();
 
 for await (const folder of folders) {
   const files = (() => {
     const result: string[] = [];
-    for (const dirent of rds(`dist/${folder}`)) if (dirent.isFile() && dirent.name.endsWith(".json")) result.push(dirent.name);
+    for (const dirent of rds(`dist/${folder}`)) if (isFile(dirent, ".json")) result.push(dirent.name);
     return result;
   })();
 
@@ -49,7 +49,10 @@ for await (const folder of folders) {
     const items: Item[] = [];
     for (const file of files) {
       const data = parse(JSON.parse(rfs(`./dist/${folder}/${file}`)));
-      items.push({ lib: `${data.name}${data.merge ? " [m]" : ""}`, ops: data.ops });
+      let lib = data.name;
+      if (data.merge) lib += " 🔹";
+      if (!data.relevant) lib += " 🔸";
+      items.push({ lib, ops: data.ops });
     }
     await write(folder, items);
   }
