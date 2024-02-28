@@ -9,10 +9,10 @@
     "start": "pnpm run build && pnpm run bench && pnpm run readme"
   },
   "devDependencies": {
-    "@klass/core": "4.0.0-next.9",
-    "@pandacss/dev": "^0.32.1",
+    "@klass/core": "4.0.0-next.15",
+    "@pandacss/dev": "^0.33.0",
     "@stitches/core": "^1.2.8",
-    "@types/node": "^20.11.20",
+    "@types/node": "^20.11.22",
     "@vanilla-extract/css": "^1.14.1",
     "@vanilla-extract/esbuild-plugin": "^2.3.5",
     "@vanilla-extract/recipes": "^0.5.1",

@@ -22,15 +22,15 @@ Benchmark of the [Klass](https://github.com/flamrdevs/klass) library
 
 | No  | Libs                        | Ops/Sec |
 | :-- | :-------------------------- | ------: |
-| 1   | @klass/core                 | 2330459 |
-| 2   | @klass/core 🔹              |  728013 |
-| 3   | @pandacss/styled-system 🔸  |  547195 |
-| 4   | @vanilla-extract/recipes 🔸 |  474135 |
-| 5   | cva                         |  300652 |
-| 6   | cva 🔹                      |  266730 |
-| 7   | tailwind-variants 🔹        |  212080 |
-| 8   | tailwind-variants           |  187888 |
-| 9   | @stitches/core 🔸           |   97826 |
+| 1   | @klass/core                 | 2274277 |
+| 2   | @klass/core 🔹              |  613986 |
+| 3   | @pandacss/styled-system 🔸  |  506303 |
+| 4   | @vanilla-extract/recipes 🔸 |  366139 |
+| 5   | cva                         |  278800 |
+| 6   | cva 🔹                      |  259013 |
+| 7   | tailwind-variants 🔹        |  222707 |
+| 8   | tailwind-variants           |  167372 |
+| 9   | @stitches/core 🔸           |   82863 |
 
 <!-- [@base] -->
 
@@ -40,15 +40,15 @@ Benchmark of the [Klass](https://github.com/flamrdevs/klass) library
 
 | No  | Libs                        | Ops/Sec |
 | :-- | :-------------------------- | ------: |
-| 1   | @klass/core                 | 2228163 |
-| 2   | @klass/core 🔹              |  670690 |
-| 3   | @pandacss/styled-system 🔸  |  611770 |
-| 4   | cva                         |  286000 |
-| 5   | @vanilla-extract/recipes 🔸 |  279384 |
-| 6   | cva 🔹                      |  278590 |
-| 7   | tailwind-variants           |  242054 |
-| 8   | tailwind-variants 🔹        |  225820 |
-| 9   | @stitches/core 🔸           |   70339 |
+| 1   | @klass/core                 | 2264492 |
+| 2   | @klass/core 🔹              |  578804 |
+| 3   | @pandacss/styled-system 🔸  |  516475 |
+| 4   | cva 🔹                      |  224658 |
+| 5   | @vanilla-extract/recipes 🔸 |  206863 |
+| 6   | cva                         |  189890 |
+| 7   | tailwind-variants           |  150525 |
+| 8   | tailwind-variants 🔹        |  130635 |
+| 9   | @stitches/core 🔸           |   65361 |
 
 <!-- [@defaults] -->
 
@@ -58,15 +58,15 @@ Benchmark of the [Klass](https://github.com/flamrdevs/klass) library
 
 | No  | Libs                        | Ops/Sec |
 | :-- | :-------------------------- | ------: |
-| 1   | @klass/core                 |  919963 |
-| 2   | @klass/core 🔹              |  604083 |
-| 3   | @pandacss/styled-system 🔸  |  554139 |
-| 4   | @vanilla-extract/recipes 🔸 |  200404 |
-| 5   | cva                         |  167464 |
-| 6   | cva 🔹                      |  150813 |
-| 7   | tailwind-variants           |  147937 |
-| 8   | tailwind-variants 🔹        |  124143 |
-| 9   | @stitches/core 🔸           |   79780 |
+| 1   | @klass/core                 |  692712 |
+| 2   | @klass/core 🔹              |  549088 |
+| 3   | @pandacss/styled-system 🔸  |  493559 |
+| 4   | @vanilla-extract/recipes 🔸 |  175340 |
+| 5   | cva                         |  151795 |
+| 6   | cva 🔹                      |  122980 |
+| 7   | tailwind-variants           |   98330 |
+| 8   | tailwind-variants 🔹        |   88532 |
+| 9   | @stitches/core 🔸           |   74663 |
 
 <!-- [@compounds] -->
 
@@ -76,11 +76,11 @@ Benchmark of the [Klass](https://github.com/flamrdevs/klass) library
 
 | No  | Libs                          | Ops/Sec |
 | :-- | :---------------------------- | ------: |
-| 1   | @klass/core                   |  665247 |
-| 2   | @pandacss/styled-system 🔸    |  550964 |
-| 3   | tailwind-variants             |  154299 |
-| 4   | @vanilla-extract/sprinkles 🔸 |  144129 |
-| 5   | @stitches/core 🔸             |   59723 |
+| 1   | @klass/core                   |  668404 |
+| 2   | @pandacss/styled-system 🔸    |  444919 |
+| 3   | tailwind-variants             |  141318 |
+| 4   | @vanilla-extract/sprinkles 🔸 |  137302 |
+| 5   | @stitches/core 🔸             |   53157 |
 
 <!-- [@responsive] -->
 
@@ -90,7 +90,7 @@ Benchmark of the [Klass](https://github.com/flamrdevs/klass) library
 
 | No  | Libs              | Ops/Sec |
 | :-- | :---------------- | ------: |
-| 1   | @klass/core       |  282063 |
-| 2   | tailwind-variants |   89318 |
+| 1   | @klass/core       |  258906 |
+| 2   | tailwind-variants |   64438 |
 
 <!-- [@slots] -->
