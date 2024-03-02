@@ -29,12 +29,18 @@ devDependencies:
   '@vanilla-extract/sprinkles':
     specifier: ^1.6.1
     version: 1.6.1(@vanilla-extract/css@1.14.1)
+  classname-variants:
+    specifier: ^1.3.3
+    version: 1.3.3
   clsx:
     specifier: 2.1.0
     version: 2.1.0
   cva:
     specifier: 1.0.0-beta.1
     version: 1.0.0-beta.1(typescript@5.3.3)
+  onno:
+    specifier: ^2.2.0
+    version: 2.2.0
   prettier:
     specifier: ^3.2.5
     version: 3.2.5
@@ -1517,6 +1523,10 @@ packages:
       fsevents: 2.3.3
     dev: true
 
+  /classname-variants@1.3.3:
+    resolution: {integrity: sha512-lMJajfEuF4RLmjUWUWbdyausHUFPYNkSIpAZDbFBxQBnnMtyjgpAt0URuQLsh5PozffPZ5Gk4eGA3lZptm+gXA==}
+    dev: true
+
   /clsx@2.0.0:
     resolution: {integrity: sha512-rQ1+kcj+ttHG0MKVGBUXwayCCF1oh39BF5COIpRzuCEv8Mwjv0XucrI2ExNTOn9IlLifGClWQcU9BrZORvtw6Q==}
     engines: {node: '>=6'}
@@ -2400,6 +2410,12 @@ packages:
     engines: {node: '>=6'}
     dependencies:
       mimic-fn: 2.1.0
+    dev: true
+
+  /onno@2.2.0:
+    resolution: {integrity: sha512-qK3rWp+rYZpHt1wq0t0pWifzd626FZ06bstD+yvZq31yiviWSijxhFvkYt8Yv7X0fyG7z0eU8nO5LL/ntWulbw==}
+    dependencies:
+      clsx: 2.0.0
     dev: true
 
   /outdent@0.8.0:
