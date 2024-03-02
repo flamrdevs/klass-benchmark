@@ -9,7 +9,7 @@
     "start": "pnpm run build && pnpm run bench && pnpm run readme"
   },
   "devDependencies": {
-    "@klass/core": "4.0.0-next.15",
+    "@klass/core": "4.0.0-next.19",
     "@pandacss/dev": "^0.33.0",
     "@stitches/core": "^1.2.8",
     "@types/node": "^20.11.22",

@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   '@klass/core':
-    specifier: 4.0.0-next.15
-    version: 4.0.0-next.15
+    specifier: 4.0.0-next.19
+    version: 4.0.0-next.19
   '@pandacss/dev':
     specifier: ^0.33.0
     version: 0.33.0(typescript@5.3.3)
@@ -830,8 +830,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
-  /@klass/core@4.0.0-next.15:
-    resolution: {integrity: sha512-7DjOcbVjJKyaSRQrang3zHj0MsaWX41SKzYFwBZWmPuH2u5uOk3NwvuDQDZMNPP9UaKGAUI1hFbVYRUPETJvcw==}
+  /@klass/core@4.0.0-next.19:
+    resolution: {integrity: sha512-ZYYeI2TexGCuxwzYqtdYLuIOoBTKQKuoBKUwEsi0gMbj/RsLPu04uzT3/WJKUye3hZfh2ZKye87wdwRuaOfb4w==}
     dependencies:
       clsx: 2.1.0
     dev: true
